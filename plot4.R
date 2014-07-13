@@ -19,8 +19,8 @@ with(data.dated, plot(data.dated[,10], data.dated$Sub_metering_1, xlab ="", ylab
 with(data.dated, lines(data.dated[,10], data.dated$Sub_metering_1, col ="black"))
 with(data.dated, lines(data.dated[,10], data.dated$Sub_metering_2, col ="red"))
 with(data.dated, lines(data.dated[,10], data.dated$Sub_metering_3, col ="blue"))
-legend("topright", pch = "-", col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+legend("topright", pch = "-", col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), y.intersp = 0.5, cex = 0.5)
 plot(data.dated[,10], data.dated$Global_reactive_power, type ="l", col="black", xlab = "datetime")
 
-dev.copy(png, file = "plot4.png")
+dev.copy(png, file = "plot4.png", width = 480, height = 480, type = "quartz")
 dev.off()
